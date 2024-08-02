@@ -33,10 +33,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Env
-        run: |
-          echo "Environment: ${{ vars.VITE_SECRET_KEY }} ${{ vars.VITE_USER_NAME }} ${{ vars.VITE_USER_PWD }}"
-          echo "Environment: $VITE_SECRET_KEY"
       - name: Checkout
         uses: actions/checkout@v4
         with:
