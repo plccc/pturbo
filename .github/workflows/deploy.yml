@@ -24,18 +24,15 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  VITE_SECRET_KEY: ${{ vars.VITE_SECRET_KEY }}
-  VITE_USER_NAME: ${{ vars.VITE_USER_NAME }}
-  VITE_USER_PWD: ${{ vars.VITE_USER_PWD }}
+  VITE_SECRET_KEY: ${{ secrets.VITE_SECRET_KEY }}
+  VITE_USER_NAME: ${{ secrets.VITE_USER_NAME }}
+  VITE_USER_PWD: ${{ secrets.VITE_USER_PWD }}
 
 jobs:
   # 构建工作
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check environment variable
-        run: |
-          echo "Environment VITE_SECRET_KEY is: ${{ vars.VITE_SECRET_KEY }} ${{ vars.VITE_USER_NAME }} ${{ vars.VITE_USER_PWD }} $VITE_SECRET_KEY"
       - name: Checkout
         uses: actions/checkout@v4
         with:
