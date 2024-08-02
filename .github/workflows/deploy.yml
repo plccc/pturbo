@@ -33,6 +33,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Check environment variable
+        run: |
+          echo "Environment VITE_SECRET_KEY is: ${{ vars.VITE_SECRET_KEY }} ${{ vars.VITE_USER_NAME }} ${{ vars.VITE_USER_PWD }} $VITE_SECRET_KEY"
       - name: Checkout
         uses: actions/checkout@v4
         with:
