@@ -1,1 +1,0 @@
-import{$ as e,U as t,S as a}from"./chunks/framework.BAuBh93l.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/trace/novel/index.md","filePath":"docs/trace/novel/index.md"}'),n={name:"docs/trace/novel/index.md"};function o(r,c,s,d,i,p){return a(),t("div")}const m=e(n,[["render",o]]);export{_ as __pageData,m as default};
