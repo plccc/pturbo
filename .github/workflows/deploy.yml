@@ -24,9 +24,9 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  VITE_SECRET_KEY: ${{ secrets.turbo.VITE_SECRET_KEY }}
-  VITE_USER_NAME: ${{ secrets.turbo.VITE_USER_NAME }}
-  VITE_USER_PWD: ${{ secrets.turbo.VITE_USER_PWD }}
+  VITE_SECRET_KEY: ${{ secrets.VITE_SECRET_KEY }}
+  VITE_USER_NAME: ${{ secrets.VITE_USER_NAME }}
+  VITE_USER_PWD: ${{ secrets.VITE_USER_PWD }}
 
 jobs:
   # 构建工作
@@ -38,7 +38,6 @@ jobs:
         run: |
           echo "Environment: ${{ secrets.VITE_SECRET_KEY }} ${{ secrets.VITE_USER_NAME }} ${{ secrets.VITE_USER_PWD }}"
           echo "Environment: $VITE_SECRET_KEY"
-          echo "TOKEN: ${{ secrets.turbo.PERSONAL_TOKEN }} "
       - name: Checkout
         uses: actions/checkout@v4
         with:
