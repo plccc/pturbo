@@ -23,6 +23,11 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  VITE_SECRET_KEY: ${{ vars.VITE_SECRET_KEY }}
+  VITE_USER_NAME: ${{ vars.VITE_USER_NAME }}
+  VITE_USER_PWD: ${{ vars.VITE_USER_PWD }}
+
 jobs:
   # 构建工作
   build:
