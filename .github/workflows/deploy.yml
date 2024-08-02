@@ -35,7 +35,7 @@ jobs:
     steps:
       - name: Checkout Env
         run: |
-          echo 'Environment: ${{ secrets.VITE_SECRET_KEY }} ${{ secrets.VITE_USER_NAME }} ${{ secrets.VITE_USER_PWD }}''
+          echo "Environment: ${{ secrets.VITE_SECRET_KEY }} ${{ secrets.VITE_USER_NAME }} ${{ secrets.VITE_USER_PWD }}"
       - name: Checkout
         uses: actions/checkout@v4
         with:
