@@ -32,10 +32,12 @@ jobs:
   # 构建工作
   build:
     runs-on: ubuntu-latest
+    environment: turbo
     steps:
       - name: Checkout Env
         run: |
-          echo "Environment: ${{ secrets.turbo.VITE_SECRET_KEY }} ${{ secrets.turbo.VITE_USER_NAME }} ${{ secrets.turbo.VITE_USER_PWD }}"
+          echo "Environment: ${{ secrets.VITE_SECRET_KEY }} ${{ secrets.VITE_USER_NAME }} ${{ secrets.VITE_USER_PWD }}"
+          echo "Environment: $VITE_SECRET_KEY"
           echo "TOKEN: ${{ secrets.turbo.PERSONAL_TOKEN }} "
       - name: Checkout
         uses: actions/checkout@v4
